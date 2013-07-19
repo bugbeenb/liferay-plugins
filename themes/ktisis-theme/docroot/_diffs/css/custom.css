@@ -29,7 +29,7 @@
 body {
 	background: #EEE url(../images/body.png) no-repeat fixed center top;
 	font-size: 11px;
-	font-family: Tahoma,Georgia,Arial,sans-serif;
+	font-family: Tahoma, Georgia, Arial, sans-serif;
 	line-height: 1.5em;
 	margin: 0 auto;
 	padding: 0;
@@ -37,9 +37,7 @@ body {
 
 .block h2 {
 	color: #282C2F;
-	font-family: "YanoneKaffeesatzRegular",arial;
-	font-size: 28px;
-	font-weight: normal;
+	font: 28px "YanoneKaffeesatzRegular", Arial normal;
 	margin: 0 auto;
 	text-transform: none;
 }
@@ -69,23 +67,23 @@ hr, .separator {
 }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
-	background: none repeat scroll 0 0 #575757;
+	background-color: #575757;
 	border: 1px solid #000;
 	color: #FFF;
 	font-weight: bold;
 	margin-right: 4px;
 	margin-bottom: 5px;
 	padding: 4px 6px;
-}
 
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-	background: none repeat scroll 0 0 #454444;
-	border: 1px solid #000;
-	color: #FFF;
-	font-weight: bold;
-	margin-bottom: 5px;
-	margin-right: 4px;
-	padding: 4px 6px;
+	&:hover {
+		background-color: #454444;
+		border: 1px solid #000;
+		color: #FFF;
+		font-weight: bold;
+		margin-bottom: 5px;
+		margin-right: 4px;
+		padding: 4px 6px;
+	}
 }
 
 #banner {
@@ -104,7 +102,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 	width: 900px;
 }
 
-.sit-title {
+.site-title {
 	display: inline;
 
 	.site-name {
@@ -168,9 +166,6 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
 /* ---------- Social Links ---------- */
 
-/*copied source code from Brad S. Knutson's website:
-http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
-
 .social-area {
 	float: right;
 	overflow: hidden;
@@ -222,7 +217,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 #navigation {
 	background: #333;
 	border-bottom: 1px solid #000;
-	border-left: 0;
+	border-left-width: 0;
 	border-top: 1px solid #111;
 	clear: both;
 	display: block;
@@ -275,13 +270,13 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	}
 
 	li {
-		@include border-radius(0);
 		display: inline-block;
 		font-size: 18px;
 		line-height: 40px;
 		padding: 0 10px;
 		position: relative;
 		vertical-align: top;
+		@include border-radius(0);
 
 		&.hover .child-menu {
 			background: none;
@@ -296,8 +291,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 				border-bottom: 1px solid #333;
 				border-left: 1px solid #333;
 				border-right: 1px solid #333;
-				font-family: Arial, Tahoma, Verdana;
-				font-size: 12px;
+				font: 12px Arial, Tahoma, Verdana;
 				line-height: 30px;
 				margin: 0;
 				padding: 0 10px;
@@ -315,7 +309,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	}
 
 	ul {
-		font-family: 'BebasNeueRegular', Tahoma,Georgia,Arial,sans-serif;
+		font-family: 'BebasNeueRegular', Tahoma, Georgia, Arial, sans-serif;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -393,9 +387,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 		border-width: 0;
 		color: #555;
 		float: none;
-		font-family: 'BebasNeueRegular', Tahoma,Georgia,Arial,sans-serif;
-		font-size: 28px;
-		font-weight: normal;
+		font: 28px 'BebasNeueRegular', Tahoma, Georgia, Arial, sans-serif normal;
 		margin: 5px 0;
 		min-width: 50%;
 		padding-bottom: 4px;
@@ -440,7 +432,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	}
 
 	&-blogs .taglib-asset-tags-summary {
-		border-left: none;
+		border-left-width: 0;
 	}
 }
 
@@ -509,8 +501,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 
 	ul {
 		background-color: #FFF;
-		border: 1px solid #DEDEDE;
-		border-color: #C0C2C5;
+		border: 1px solid #C0C2C5;
 		margin: 0;
 	}
 }
@@ -533,9 +524,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 
 .ie6 {
 	#banner {
-		height: 1%;
-
-		h1.logo {
+		&, h1.logo {
 			height: 1%;
 		}
 	}
@@ -545,10 +534,10 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 			padding: 4px 15px;
 		}
 
-		&, li {
+		a, li {
 			display: inline;
-			z-index: 200;
 			zoom: 1;
+			z-index: 200;
 		}
 
 		ul.child-menu-visible, li.hover ul.child-menu {
@@ -571,10 +560,10 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 		padding: 4px 15px;
 	}
 
-	li, a {
+	a, li {
 		display: inline;
-		z-index: 200;
 		zoom: 1;
+		z-index: 200;
 	}
 
 	ul {
@@ -616,8 +605,8 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 /* ---------- Extras ---------- */
 
 a {
-	@include transition-property(color);
 	@include transition-duration(0.2s);
+	@include transition-property(color);
 	@include transition-timing-function(ease-in-out);
 }
 
@@ -627,13 +616,10 @@ blockquote, q {
 }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
-	@include border-radius(5px);
-	@include text-shadow(#300033 1px 1px 1px);
-}
-
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-	@include border-radius(5px);
-	@include text-shadow(#300033 1px 1px 1px);
+	&, &:hover {
+		@include border-radius(5px);
+		@include text-shadow(#300033 1px 1px 1px);
+	}
 }
 
 .aui-combobox .aui-toolbar-first {
@@ -642,8 +628,8 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 }
 
 .fsocial {
-	@include transition-property(all);
 	@include transition-duration(0.3s);
+	@include transition-property(all);
 	@include transition-timing-function(ease);
 
 	&:hover {

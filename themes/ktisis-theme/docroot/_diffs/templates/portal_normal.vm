@@ -35,16 +35,19 @@ $theme.include($body_top_include)
 				#end
 
 				<span class="social-area">
-					<a href="https://plus.google.com/communities/111205855624334718665" target="_blank" rel="nofollow">
+					<a href="https://plus.google.com/communities/111205855624334718665" rel="nofollow" target="_blank">
 						<div class="fsocial fgoogle"></div>
 					</a>
-					<a href="http://www.linkedin.com/company/liferay-inc." target="_blank" rel="nofollow">
+
+					<a href="http://www.linkedin.com/company/liferay-inc." rel="nofollow" target="_blank">
 						<div class="fsocial flinkedin"></div>
 					</a>
-					<a href="https://www.facebook.com/liferay" target="_blank" rel="nofollow">
+
+					<a href="https://www.facebook.com/liferay" rel="nofollow" target="_blank">
 						<div class="fsocial ffacebook"></div>
 					</a>
-					<a href="https://twitter.com/liferay" target="_blank" rel="nofollow">
+
+					<a href="https://twitter.com/liferay" rel="nofollow" target="_blank">
 						<div class="fsocial ftwitter"></div>
 					</a>
 				</span>
